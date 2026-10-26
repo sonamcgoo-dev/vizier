@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.tox/
+
+# Editors / OS
+.idea/
+.vscode/
+Thumbs.db
+desktop.ini
+
+# Logs and local data
+*.log
+config.json
+data/
+*.part
+
+# Packaging intermediates
+build/vizier_version_info.txt
+packaging/windows/__pycache__/

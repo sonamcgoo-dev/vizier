@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "RET", "PERF", "RUF"]
+# E501: long lines are handled by the formatter/reviewer.
+# B008: Qt/pydantic call expressions are legitimate defaults.
+# PERF203: per-item error handling in loops is intentional.
+# RUF001: typographic dashes and quotes are intentional in UI copy.
+# RUF012: tool schemas are class-level constants, not shared mutable state.
+ignore = ["E501", "B008", "PERF203", "RUF001", "RUF012"]
