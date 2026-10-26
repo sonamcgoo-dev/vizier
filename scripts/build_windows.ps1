@@ -229,3 +229,4 @@ Write-Host "  Checksums: $ChecksumPath"
 Write-Host "  Signature: $($signature.Status) (unsigned builds are expected)"
 Write-Host ""
 Write-Host "Note: the installer and executables are unsigned. Windows SmartScreen may warn on first run." -ForegroundColor Yellow
+exit 0
