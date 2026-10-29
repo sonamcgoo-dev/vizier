@@ -275,5 +275,6 @@ def test_about_dialog_with_patched_checks(app, dialog_env, monkeypatch) -> None:
     assert "Vizier" in dialog.windowTitle()
     assert dialog.brand_header is not None
     assert dialog.brand_header.wordmark.text() == "VIZIER"
+    assert "github.com/sonamcgoo-dev/vizier" in dialog.repo_link.text()
     dialog.close()
 

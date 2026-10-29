@@ -43,7 +43,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from vizier.__version__ import __codename__, __version__
+from vizier.__version__ import __codename__, __repository__, __version__
 from vizier.config import Config
 from vizier.ui.branding import (
     CRIMSON_BRIGHT,
@@ -752,6 +752,16 @@ class AboutDialog(BrandedDialog):
             "A 100% local AI agent for computer use, filesystem management, "
             "and general assistance. No cloud. No BYOK. No telemetry."
         ))
+        self.repo_link = QLabel(
+            f'<a href="{__repository__}" style="color:{GOLD_BRIGHT}; '
+            f'text-decoration:none;">{__repository__.removeprefix("https://")}</a>'
+        )
+        self.repo_link.setObjectName("repoLink")
+        self.repo_link.setTextFormat(Qt.RichText)
+        self.repo_link.setOpenExternalLinks(True)
+        self.repo_link.setToolTip("Open the Vizier repository on GitHub")
+        self.repo_link.setAccessibleName("Vizier GitHub repository")
+        layout.addWidget(self.repo_link)
         layout.addWidget(OrnamentDivider())
 
         info = QLabel()

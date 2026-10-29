@@ -1,6 +1,6 @@
 # Vizier 1.0.0 — “Royal Advisor”
 
-**Release date:** 2026-10-26  
+**Release date:** 2026-10-29  
 **Platform:** Windows 10/11 x64  
 **License:** MIT
 
@@ -84,6 +84,8 @@ Run `VizierCLI.exe doctor` and include the output plus the tail of
 `crash.log` in the same directory.
 
 ## Source and build
+
+Source, issues, and releases: [github.com/sonamcgoo-dev/vizier](https://github.com/sonamcgoo-dev/vizier).
 
 Build from source with Python 3.10+ (tested on 3.13) and Inno Setup 6:
 
