@@ -1,0 +1,34 @@
+[
+  {
+    "name": "filesystem",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+    "enabled": true,
+    "auto_start": true
+  },
+  {
+    "name": "github",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-github"],
+    "enabled": false,
+    "auto_start": false
+  },
+  {
+    "name": "sqlite",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-sqlite", "--db-path", "./data/local.db"],
+    "enabled": false,
+    "auto_start": false
+  },
+  {
+    "name": "fetch",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-fetch"],
+    "enabled": false,
+    "auto_start": false
+  }
+]
